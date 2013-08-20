@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WhereamiViewController.h"
 
 @class WhereamiViewController;
 
-@interface WhereamiAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WhereamiAppDelegate : UIResponder <UIApplicationDelegate, UIScrollViewDelegate> {
+    WhereamiViewController  *view;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
