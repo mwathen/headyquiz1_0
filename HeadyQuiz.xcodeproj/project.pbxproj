@@ -259,13 +259,13 @@
 		BAFA8D7B168DEC7E006F7031 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Wathen (38Q6EX82WL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "test/HeadyQuiz-Prefix.pch";
 				INFOPLIST_FILE = "test/HeadyQuiz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = HeadyQuiz;
-				PROVISIONING_PROFILE = "E37F8543-CA06-4A90-9349-0E7DEFD34130";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,13 +274,13 @@
 		BAFA8D7C168DEC7E006F7031 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Wathen (38Q6EX82WL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "test/HeadyQuiz-Prefix.pch";
 				INFOPLIST_FILE = "test/HeadyQuiz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = HeadyQuiz;
-				PROVISIONING_PROFILE = "E37F8543-CA06-4A90-9349-0E7DEFD34130";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
