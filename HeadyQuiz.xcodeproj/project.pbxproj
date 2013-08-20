@@ -11,6 +11,8 @@
 		BABDDE021697CB8D0096B807 /* Screen Shot 2013-01-04 at 9.44.50 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = BABDDE011697CB8D0096B807 /* Screen Shot 2013-01-04 at 9.44.50 PM.png */; };
 		BABDDE051697CBD60096B807 /* Screen Shot 2013-01-04 at 9.47.04 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = BABDDE041697CBD60096B807 /* Screen Shot 2013-01-04 at 9.47.04 PM.png */; };
 		BAF7FD5117C2F9D0007A9005 /* testmike.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF7FD5017C2F9D0007A9005 /* testmike.xib */; };
+		BAF7FD5317C30955007A9005 /* regular_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7FD5217C30955007A9005 /* regular_icon.png */; };
+		BAF7FD5517C3095E007A9005 /* retina_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7FD5417C3095E007A9005 /* retina_icon.png */; };
 		BAFA8D5B168DEC7E006F7031 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFA8D5A168DEC7E006F7031 /* UIKit.framework */; };
 		BAFA8D5D168DEC7E006F7031 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFA8D5C168DEC7E006F7031 /* Foundation.framework */; };
 		BAFA8D5F168DEC7E006F7031 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFA8D5E168DEC7E006F7031 /* CoreGraphics.framework */; };
@@ -28,6 +30,8 @@
 		BABDDE011697CB8D0096B807 /* Screen Shot 2013-01-04 at 9.44.50 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2013-01-04 at 9.44.50 PM.png"; sourceTree = "<group>"; };
 		BABDDE041697CBD60096B807 /* Screen Shot 2013-01-04 at 9.47.04 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2013-01-04 at 9.47.04 PM.png"; sourceTree = "<group>"; };
 		BAF7FD5017C2F9D0007A9005 /* testmike.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testmike.xib; sourceTree = "<group>"; };
+		BAF7FD5217C30955007A9005 /* regular_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regular_icon.png; sourceTree = "<group>"; };
+		BAF7FD5417C3095E007A9005 /* retina_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retina_icon.png; sourceTree = "<group>"; };
 		BAFA8D56168DEC7E006F7031 /* HeadyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFA8D5A168DEC7E006F7031 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAFA8D5C168DEC7E006F7031 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,6 +66,8 @@
 		BAFA8D4B168DEC7E006F7031 = {
 			isa = PBXGroup;
 			children = (
+				BAF7FD5417C3095E007A9005 /* retina_icon.png */,
+				BAF7FD5217C30955007A9005 /* regular_icon.png */,
 				BABCB3BE16A392460075F8B2 /* 7413.jpg */,
 				BABDDE041697CBD60096B807 /* Screen Shot 2013-01-04 at 9.47.04 PM.png */,
 				BABDDE011697CB8D0096B807 /* Screen Shot 2013-01-04 at 9.44.50 PM.png */,
@@ -176,6 +182,8 @@
 				BABDDE051697CBD60096B807 /* Screen Shot 2013-01-04 at 9.47.04 PM.png in Resources */,
 				BABCB3BF16A392460075F8B2 /* 7413.jpg in Resources */,
 				BAF7FD5117C2F9D0007A9005 /* testmike.xib in Resources */,
+				BAF7FD5317C30955007A9005 /* regular_icon.png in Resources */,
+				BAF7FD5517C3095E007A9005 /* retina_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
