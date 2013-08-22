@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AVFoundation/AVAudioPlayer.h"
 
 @interface WhereamiViewController : UIViewController
 {
+    AVAudioPlayer *audioPlayer;
+
 int currentQuestionIndex;
 
     NSMutableArray *question1;

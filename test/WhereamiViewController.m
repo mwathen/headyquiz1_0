@@ -179,6 +179,21 @@
 //    [self setView:self.view];
 //}
 
+- (void)viewDidLoad{
+    //play the attached audio
+    [super viewDidLoad];
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/caseyjones_short.mp3", [[NSBundle mainBundle] resourcePath]]];
+
+    NSError *error;
+	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	audioPlayer.numberOfLoops = 0;
+	
+	if (audioPlayer == nil)
+		NSLog(@"%@",[error localizedDescription]);
+	else
+		[audioPlayer play];
+}
+
 
 - (IBAction)answer1:(id)sender{
     NSString *identifier = @"answer1";
