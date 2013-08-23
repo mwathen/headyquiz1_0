@@ -9,6 +9,7 @@
 #import "WhereamiViewController.h"
 #import "Whereami.h"
 
+//static definitions for our JSON retrieval code
 #define Queue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
 #define JSONURL [NSURL URLWithString:@"http://www.mikewath.com/heady_quiz.php"]
 
@@ -18,38 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        question1 = [[NSMutableArray alloc] init];
-              
-        correctAnswer = [[NSMutableArray alloc] init];
-        testQuestions = [[NSDictionary alloc] init];
-        testAnswers = [[NSDictionary alloc] init];
-        
-        testQuestions = @{@"question1":@"What was the name of the band Janis Joplin started out with, brah?",@"question2":@"What is the name of the late 60's supergroup with Eric Clapton and Steve Winwood?",@"question3":@"Who is the drummer for Phish?",@"question4":@"What neighborhood of San Francisco did the Grateful Dead reside?",@"question5":@"What was the name of the 2003 comeback album by the Allman Brothers?",@"question6":@"What is the name of the online radio show combining the best of Phish and the Dead?",@"question7":@"What was the name of the train tour that traveled Canada with Janis, The Dead and The Band in 1970?",@"question8":@"Which Phish stunt had band members playing to a series of beach balls released to the audience?"};
-        
-        [question1 addObject:@"What was the name of the band Janis Joplin started out with, brah?"];
-
-        answer1 = [NSMutableArray arrayWithObjects:@"Jefferson Airplane",@"Big Brother and the Holding Company",@"Canned Heat",@"The Mamas and the Papas",nil];
-        answer2 = [NSMutableArray arrayWithObjects:@"The Travelling Wilburys",@"Them Crooked Vultures",@"Blind Faith",@"Derek and the Dominoes",nil];
-        answer3 = [NSMutableArray arrayWithObjects:@"Trey Anastasio",@"Mike Gordon",@"Page McConnell",@"Jon Fishman",nil];
-        answer4 = [NSMutableArray arrayWithObjects:@"Outer Sunset",@"Mission District",@"Haight-Ashbury",@"Chinatown",nil];
-        answer5 = [NSMutableArray arrayWithObjects:@"Hittin' the Note",@"Space Wrangler",@"Eat a Peach",@"Here and Back Again",nil];
-        answer6 = [NSMutableArray arrayWithObjects:@"Jam On",@"HeadStash",@"Live Phish Radio",@"The Grateful Dead Hour",nil];
-        answer7 = [NSMutableArray arrayWithObjects:@"Steel Wheels Tour",@"Trippin across Canada",@"Ridin' That Train",@"Festival Express",nil];
-        answer8 = [NSMutableArray arrayWithObjects:@"Runaway Golf Cart Marathon",@"Secret Language",@"Big Ball Jam",@"Underwater Tank", nil];
-       
-        testAnswers = @{@"answer1":answer1,@"answer2":answer2,@"answer3":answer3,@"answer4":answer4,@"answer5":answer5,@"answer6":answer6,@"answer7":answer7,@"answer8":answer8};
-        
-        [correctAnswer addObject:@"answer2"];
-        [correctAnswer addObject:@"answer3"];
-        [correctAnswer addObject:@"answer4"];
-        [correctAnswer addObject:@"answer3"];
-        [correctAnswer addObject:@"answer1"];
-        [correctAnswer addObject:@"answer2"];
-        [correctAnswer addObject:@"answer4"];
-        [correctAnswer addObject:@"answer3"];
-
-        numberquestions = 8;
-        
+        numberquestions = 9;
     }
     
     return self;
@@ -98,7 +68,7 @@
 
     NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
     NSString *correctAnswerString = [record objectForKey:@"correct_answer"];
-
+    
     NSLog(@"id: %@", id);
     NSLog(@"correct_answer: %@", correctAnswerString);
     
@@ -147,8 +117,16 @@
 
     currentQuestionIndex = 0;
     NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
-
-    NSString *question = [record objectForKey:@"question"];
+    #define AS(A,B)    [(A) stringByAppendingString:(B)]
+    int currentquestionreference = currentQuestionIndex+1;
+    
+    NSString *question_number = [NSString stringWithFormat:@"%d. ",currentquestionreference];
+//  NSLog(@"qnumber: %@", question_number);
+//  NSLog(@"qnumber2: %@", [record objectForKey:@"question"]);
+//  NSLog(@"qnumber3: %@", record);
+    
+    NSString *question = AS(question_number,[record objectForKey:@"question"]);
+    
     [questionLabel setText:question];
     [answer1Label setText:[record objectForKey:@"answer1"]];
     [answer2Label setText:[record objectForKey:@"answer2"]];
@@ -170,7 +148,11 @@
     NSLog(@"question_index: %d", currentQuestionIndex);
 
     NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
-    NSString *question = [record objectForKey:@"question"];
+    int currentquestionreference = currentQuestionIndex+1;
+    NSString *question_number = [NSString stringWithFormat:@"%d. ",currentquestionreference];
+    NSString *question = AS(question_number,[record objectForKey:@"question"]);
+
+  //  NSString *question = [record objectForKey:@"question"];
 
     [answer1button setEnabled:YES];
     [answer2button setEnabled:YES];
@@ -211,6 +193,12 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+
+    startQuiz.alpha = 0.0;
+    startQuiz.enabled = NO;
+    
+    [view addSubview:startQuiz];
+    
     CGRect imgTopFrame = imgView.frame;
     imgTopFrame.origin.x = 40; //-basketTopFrame.size.width;
     
@@ -223,6 +211,15 @@
                      completion:^(BOOL finished){
                          NSLog(@"Done!");
                      }];
+
+    [UIView animateWithDuration:3.5
+                          delay:0.0
+                        options: UIViewAnimationCurveEaseInOut
+                     animations:^{startQuiz.alpha = 1.0;}
+                     completion:nil];
+
+    startQuiz.enabled = YES;
+    
 }
 
 - (void)fetchedData:(NSData *)responseData {
@@ -236,7 +233,7 @@
     records = [json objectForKey:@"records"];
  //   NSDictionary *questions = [records objectForKey:@"question"];
     
-//    NSLog(@"records: %@", records);
+    NSLog(@"records: %@", records);
 }
 
 

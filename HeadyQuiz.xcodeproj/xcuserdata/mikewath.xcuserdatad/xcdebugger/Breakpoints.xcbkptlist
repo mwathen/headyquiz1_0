@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "test/WhereamiViewController.m"
-         timestampString = "398957167.138562"
+         timestampString = "398964333.947344"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "199"
-         endingLineNumber = "199"
+         startingLineNumber = "181"
+         endingLineNumber = "181"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
