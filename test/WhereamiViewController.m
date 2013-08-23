@@ -196,23 +196,24 @@
 
     startQuiz.alpha = 0.0;
     startQuiz.enabled = NO;
+    imgView.alpha = 0.0;
     
     [view addSubview:startQuiz];
     
     CGRect imgTopFrame = imgView.frame;
-    imgTopFrame.origin.x = 40; //-basketTopFrame.size.width;
+    imgTopFrame.origin.x = 20; //-basketTopFrame.size.width;
     
-    [UIView animateWithDuration:2.5
+    [UIView animateWithDuration:3.0
                           delay:0.0
                         options: UIViewAnimationCurveEaseOut
                      animations:^{
-                         imgView.frame = imgTopFrame;
+                         imgView.alpha = 1.0;
                      }
                      completion:^(BOOL finished){
                          NSLog(@"Done!");
                      }];
 
-    [UIView animateWithDuration:3.5
+    [UIView animateWithDuration:3.0
                           delay:0.0
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{startQuiz.alpha = 1.0;}
