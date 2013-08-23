@@ -30,6 +30,7 @@ int currentQuestionIndex;
     NSMutableArray *correctAnswer;
     NSDictionary *testQuestions;
     NSDictionary *testAnswers;
+    NSMutableArray *records;
     int numberquestions;
     int numbercorrect;
 

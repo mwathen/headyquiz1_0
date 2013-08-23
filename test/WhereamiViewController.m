@@ -7,8 +7,10 @@
 //
 
 #import "WhereamiViewController.h"
-
 #import "Whereami.h"
+
+#define Queue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
+#define JSONURL [NSURL URLWithString:@"http://www.mikewath.com/heady_quiz.php"]
 
 @implementation WhereamiViewController
 
@@ -93,8 +95,14 @@
 - (void)checkAnswer:(NSString*)id
 {
     self.wrongAnswer = NO;
-        
-    if (id == correctAnswer[currentQuestionIndex]) {
+
+    NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
+    NSString *correctAnswerString = [record objectForKey:@"correct_answer"];
+
+    NSLog(@"id: %@", id);
+    NSLog(@"correct_answer: %@", correctAnswerString);
+    
+    if ([id isEqualToString:correctAnswerString]) {
         [correctAnswerLabel setText:@"Correct"];
         [nextQuestion setHidden:NO];
         [answer1button setEnabled:NO];
@@ -138,12 +146,14 @@
     [correctAnswerLabel setText:@""];
 
     currentQuestionIndex = 0;
-    NSString *question = [question1 objectAtIndex:(0)];
+    NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
+
+    NSString *question = [record objectForKey:@"question"];
     [questionLabel setText:question];
-    [answer1Label setText:[answer1 objectAtIndex:(0)]];
-    [answer2Label setText:[answer1 objectAtIndex:(1)]];
-    [answer3Label setText:[answer1 objectAtIndex:(2)]];
-    [answer4Label setText:[answer1 objectAtIndex:(3)]];
+    [answer1Label setText:[record objectForKey:@"answer1"]];
+    [answer2Label setText:[record objectForKey:@"answer2"]];
+    [answer3Label setText:[record objectForKey:@"answer3"]];
+    [answer4Label setText:[record objectForKey:@"answer4"]];
 }
 
 - (IBAction)nextQuestion:(id)sender{
@@ -152,11 +162,15 @@
 
     //define our concatenated label
     #define AS(A,B)    [(A) stringByAppendingString:(B)]
-    NSString *strFromInt = [NSString stringWithFormat:@"%d",currentQuestionIndex+1];
-    NSString *questionref = AS(@"question",strFromInt);
-    NSString *answerref = AS(@"answer",strFromInt);
+ //   NSString *strFromInt = [NSString stringWithFormat:@"%d",currentQuestionIndex+1];
+ //   NSString *questionref = AS(@"question",strFromInt);
+ //   NSString *answerref = AS(@"answer",strFromInt);
     
-    NSString *question = [testQuestions objectForKey:(questionref)];
+    NSLog(@"records: %@", records);
+    NSLog(@"question_index: %d", currentQuestionIndex);
+
+    NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
+    NSString *question = [record objectForKey:@"question"];
 
     [answer1button setEnabled:YES];
     [answer2button setEnabled:YES];
@@ -164,22 +178,15 @@
     [answer4button setEnabled:YES];
     [questionLabel setText:question];
 
-    NSArray *answers = [testAnswers objectForKey:(answerref)];
-    [answer1Label setText:[answers objectAtIndex:(0)]];
-    [answer2Label setText:[answers objectAtIndex:(1)]];
-    [answer3Label setText:[answers objectAtIndex:(2)]];
-    [answer4Label setText:[answers objectAtIndex:(3)]];
+ //   NSArray *answers = [testAnswers objectForKey:(answerref)];
+    [answer1Label setText:[record objectForKey:@"answer1"]];
+    [answer2Label setText:[record objectForKey:@"answer2"]];
+    [answer3Label setText:[record objectForKey:@"answer3"]];
+    [answer4Label setText:[record objectForKey:@"answer4"]];
 }
 
-//- (void)loadView
-//{
-//    CGRect frame = [[UIScreen mainScreen] bounds];
-//    Whereami *w = [[Whereami alloc] initWithFrame:frame];
-
-//    [self setView:self.view];
-//}
-
 - (void)viewDidLoad{
+
     //play the attached audio
     [super viewDidLoad];
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/caseyjones_short.mp3", [[NSBundle mainBundle] resourcePath]]];
@@ -192,6 +199,44 @@
 		NSLog(@"%@",[error localizedDescription]);
 	else
 		[audioPlayer play];
+    
+    //json feed retrieval
+    dispatch_async(Queue, ^{
+        NSData *data = [NSData dataWithContentsOfURL:
+                        JSONURL];
+        [self performSelectorOnMainThread:@selector(fetchedData:)
+                               withObject:data waitUntilDone:YES];
+    });
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGRect imgTopFrame = imgView.frame;
+    imgTopFrame.origin.x = 40; //-basketTopFrame.size.width;
+    
+    [UIView animateWithDuration:2.5
+                          delay:0.0
+                        options: UIViewAnimationCurveEaseOut
+                     animations:^{
+                         imgView.frame = imgTopFrame;
+                     }
+                     completion:^(BOOL finished){
+                         NSLog(@"Done!");
+                     }];
+}
+
+- (void)fetchedData:(NSData *)responseData {
+    //parse out the json data to a usable array
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization
+                          JSONObjectWithData:responseData
+                          options:kNilOptions
+                          error:&error];
+    
+    records = [json objectForKey:@"records"];
+ //   NSDictionary *questions = [records objectForKey:@"question"];
+    
+//    NSLog(@"records: %@", records);
 }
 
 
