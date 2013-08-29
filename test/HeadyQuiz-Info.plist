@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BellBottom.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -14,8 +18,6 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>regular_icon.png</string>
-				<string>retina_icon.png</string>
 				<string>regular_icon.png</string>
 				<string>retina_icon.png</string>
 			</array>

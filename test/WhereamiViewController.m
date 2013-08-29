@@ -60,6 +60,14 @@
     }
     
     numbercorrect = 0;
+    //grab a new feed
+    dispatch_async(Queue, ^{
+        NSData *data = [NSData dataWithContentsOfURL:
+                        JSONURL];
+        [self performSelectorOnMainThread:@selector(fetchedData:)
+                               withObject:data waitUntilDone:YES];
+    });
+    
 }
 
 - (void)checkAnswer:(NSString*)id
@@ -181,6 +189,8 @@
 		NSLog(@"%@",[error localizedDescription]);
 	else
 		[audioPlayer play];
+    
+    [introLabel setFont: [UIFont fontWithName:@"BellBottom" size:35]];
     
     //json feed retrieval
     dispatch_async(Queue, ^{
