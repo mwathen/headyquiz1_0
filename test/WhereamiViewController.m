@@ -191,7 +191,6 @@
 		[audioPlayer play];
     
     [introLabel setFont: [UIFont fontWithName:@"BellBottom" size:35]];
- //   [startQuiz.titleLabel setFont: [UIFont fontWithName:@"BellBottom" size:20]];
    
     //json feed retrieval
     dispatch_async(Queue, ^{
@@ -234,6 +233,8 @@
     startQuiz.enabled = YES;
     [imgView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
     [imgView.layer setBorderWidth: 2.0];
+    imgView.layer.cornerRadius = 10;
+    imgView.clipsToBounds = YES;
 }
 
 - (void)fetchedData:(NSData *)responseData {
