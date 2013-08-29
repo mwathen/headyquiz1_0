@@ -19,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        numberquestions = 9;
+        numberquestions = 10;
     }
     
     return self;
@@ -152,7 +152,7 @@
  //   NSString *questionref = AS(@"question",strFromInt);
  //   NSString *answerref = AS(@"answer",strFromInt);
     
-    NSLog(@"records: %@", records);
+ //   NSLog(@"records: %@", records);
     NSLog(@"question_index: %d", currentQuestionIndex);
 
     NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
@@ -191,7 +191,8 @@
 		[audioPlayer play];
     
     [introLabel setFont: [UIFont fontWithName:@"BellBottom" size:35]];
-    
+ //   [startQuiz.titleLabel setFont: [UIFont fontWithName:@"BellBottom" size:20]];
+   
     //json feed retrieval
     dispatch_async(Queue, ^{
         NSData *data = [NSData dataWithContentsOfURL:
@@ -229,8 +230,10 @@
                      animations:^{startQuiz.alpha = 1.0;}
                      completion:nil];
 
-    startQuiz.enabled = YES;
     
+    startQuiz.enabled = YES;
+    [imgView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
+    [imgView.layer setBorderWidth: 2.0];
 }
 
 - (void)fetchedData:(NSData *)responseData {
