@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA7639B917CFD64500C9CA24 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7639B817CFD64500C9CA24 /* CoreData.framework */; };
+		BA7639BC17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA7639BA17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodeld */; };
 		BABCB3BF16A392460075F8B2 /* 7413.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BABCB3BE16A392460075F8B2 /* 7413.jpg */; };
 		BABDF97217CF08C1005AB8BD /* BellBottom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABDF97117CF08C1005AB8BD /* BellBottom.ttf */; };
 		BAF7094117C67432007A9005 /* caseyjones_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAF7094017C67432007A9005 /* caseyjones_short.mp3 */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA7639B817CFD64500C9CA24 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BA7639BB17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeadyQuiz.xcdatamodel; sourceTree = "<group>"; };
 		BABCB3BE16A392460075F8B2 /* 7413.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7413.jpg; sourceTree = "<group>"; };
 		BABDF97117CF08C1005AB8BD /* BellBottom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BellBottom.ttf; path = ../../../../Downloads/BellBottom.ttf; sourceTree = "<group>"; };
 		BAF7094017C67432007A9005 /* caseyjones_short.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = caseyjones_short.mp3; path = ../../../.Trash/caseyjones_short.mp3; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7639B917CFD64500C9CA24 /* CoreData.framework in Frameworks */,
 				BAF7FD5717C66EDE007A9005 /* AVFoundation.framework in Frameworks */,
 				BAFA8D5B168DEC7E006F7031 /* UIKit.framework in Frameworks */,
 				BAFA8D5D168DEC7E006F7031 /* Foundation.framework in Frameworks */,
@@ -69,6 +74,7 @@
 		BAFA8D4B168DEC7E006F7031 = {
 			isa = PBXGroup;
 			children = (
+				BA7639BA17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodeld */,
 				BAF7094017C67432007A9005 /* caseyjones_short.mp3 */,
 				BAF7FD5417C3095E007A9005 /* retina_icon.png */,
 				BAF7FD5217C30955007A9005 /* regular_icon.png */,
@@ -90,6 +96,7 @@
 		BAFA8D59168DEC7E006F7031 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA7639B817CFD64500C9CA24 /* CoreData.framework */,
 				BAF7FD5617C66EDE007A9005 /* AVFoundation.framework */,
 				BAFA8D5A168DEC7E006F7031 /* UIKit.framework */,
 				BAFA8D5C168DEC7E006F7031 /* Foundation.framework */,
@@ -201,6 +208,7 @@
 				BAFA8D67168DEC7E006F7031 /* main.m in Sources */,
 				BAFA8D6B168DEC7E006F7031 /* WhereamiAppDelegate.m in Sources */,
 				BAFA8D74168DEC7E006F7031 /* WhereamiViewController.m in Sources */,
+				BA7639BC17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +328,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA7639BA17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA7639BB17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodel */,
+			);
+			currentVersion = BA7639BB17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodel */;
+			path = HeadyQuiz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BAFA8D4D168DEC7E006F7031 /* Project object */;
 }

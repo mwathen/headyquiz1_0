@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVAudioPlayer.h"
 #import "QuartzCore/QuartzCore.h"
+#import <CoreData/CoreData.h>
 
 @interface WhereamiViewController : UIViewController
 {
@@ -42,6 +43,7 @@ int currentQuestionIndex;
     IBOutlet UILabel *answer3Label;
     IBOutlet UILabel *answer4Label;
     IBOutlet UILabel *correctAnswerLabel;
+    IBOutlet UILabel *lastscore;
     IBOutlet UIButton *startQuiz;
     IBOutlet UIButton *nextQuestion;
     IBOutlet UIButton *answer1button;
@@ -55,6 +57,10 @@ int currentQuestionIndex;
 @property (nonatomic) BOOL wrongAnswer;
 
 @property (nonatomic) UIImageView *imageView;
+
+@property (nonatomic,strong) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (IBAction)startQuiz:(id)sender;
 - (IBAction)answer1:(id)sender;

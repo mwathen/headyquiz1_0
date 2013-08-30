@@ -15,6 +15,10 @@
 
 @implementation WhereamiViewController
 
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -58,6 +62,22 @@
         
         [a show];
     }
+    
+    //write score to core data (HeadyQuiz entity)
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObject *headyquizinfo = [NSEntityDescription
+                                      insertNewObjectForEntityForName:@"HeadyQuiz"
+                                      inManagedObjectContext:context];
+    [headyquizinfo setValue:[NSString stringWithFormat:@"%@%%", strFromscore] forKey:@"lastscore"];
+    NSDate *date = [NSDate date];
+    NSTimeInterval ti = [date timeIntervalSince1970];
+    [headyquizinfo setValue:[NSNumber numberWithInt:ti] forKey:@"timestamp"];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    //end core data write
     
     numbercorrect = 0;
     //grab a new feed
@@ -110,6 +130,7 @@
 
 - (IBAction)startQuiz:(id)sender{
     [imgView setHidden:YES];
+    [lastscore setHidden:YES];
     [introLabel setText:@""];
     [startQuiz setHidden:YES];
     [answer1button setHidden:NO];
@@ -212,7 +233,28 @@
     
     CGRect imgTopFrame = imgView.frame;
     imgTopFrame.origin.x = 20; //-basketTopFrame.size.width;
+
+    //fetch the managed object context data
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSError *error;
+
+    //to fetch data
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"HeadyQuiz" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
     
+    // Results should be in descending order of timeStamp.
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:NO];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    NSString *latestEntity = [fetchedObjects objectAtIndex:0];
+    NSLog(@"Name: %@", [latestEntity valueForKey:@"lastscore"]);
+    NSLog(@"Timestamp: %@", [latestEntity valueForKey:@"timestamp"]);
+    
+    lastscore.text=[NSString stringWithFormat: @"Last Score: %@", [latestEntity valueForKey:@"lastscore"]];
+
     [UIView animateWithDuration:3.0
                           delay:0.0
                         options: UIViewAnimationCurveEaseOut
@@ -248,7 +290,7 @@
     records = [json objectForKey:@"records"];
  //   NSDictionary *questions = [records objectForKey:@"question"];
     
-    NSLog(@"records: %@", records);
+ //   NSLog(@"records: %@", records);
 }
 
 
