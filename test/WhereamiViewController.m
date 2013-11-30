@@ -143,7 +143,24 @@
     [answer4button setEnabled:YES];
     [correctAnswerLabel setHidden:NO];
     [correctAnswerLabel setText:@""];
-
+    
+    //button properties
+    answer1button.layer.borderWidth=1.0f;
+    answer1button.layer.cornerRadius = 7;
+    answer1button.layer.borderColor=[[UIColor blackColor] CGColor];
+    answer2button.layer.borderWidth=1.0f;
+    answer2button.layer.cornerRadius = 7;
+    answer2button.layer.borderColor=[[UIColor blackColor] CGColor];
+    answer3button.layer.borderWidth=1.0f;
+    answer3button.layer.cornerRadius = 7;
+    answer3button.layer.borderColor=[[UIColor blackColor] CGColor];
+    answer4button.layer.borderWidth=1.0f;
+    answer4button.layer.cornerRadius = 7;
+    answer4button.layer.borderColor=[[UIColor blackColor] CGColor];
+    nextQuestion.layer.borderWidth=1.0f;
+    nextQuestion.layer.cornerRadius = 7;
+    nextQuestion.layer.borderColor=[[UIColor colorWithRed:51.0f/255.0f green:102.0f/255.0f blue:153.0f/255.0f alpha:1.0f] CGColor];
+    
     currentQuestionIndex = 0;
     NSDictionary *record = [records objectAtIndex:currentQuestionIndex];
     #define AS(A,B)    [(A) stringByAppendingString:(B)]
@@ -187,6 +204,7 @@
     [answer2button setEnabled:YES];
     [answer3button setEnabled:YES];
     [answer4button setEnabled:YES];
+
     [questionLabel setText:question];
 
  //   NSArray *answers = [testAnswers objectForKey:(answerref)];
@@ -198,6 +216,12 @@
 
 - (void)viewDidLoad{
 
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"sunglasses.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
+    
     //play the attached audio
     [super viewDidLoad];
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/caseyjones_short.mp3", [[NSBundle mainBundle] resourcePath]]];
@@ -224,7 +248,6 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-
     startQuiz.alpha = 0.0;
     startQuiz.enabled = NO;
     imgView.alpha = 0.0;
@@ -270,8 +293,12 @@
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{startQuiz.alpha = 1.0;}
                      completion:nil];
-
     
+    //button properties
+    startQuiz.layer.borderWidth=1.0f;
+    startQuiz.layer.cornerRadius = 7;
+    startQuiz.layer.borderColor=[[UIColor colorWithRed:51.0f/255.0f green:102.0f/255.0f blue:153.0f/255.0f alpha:1.0f] CGColor];
+
     startQuiz.enabled = YES;
     [imgView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
     [imgView.layer setBorderWidth: 2.0];
