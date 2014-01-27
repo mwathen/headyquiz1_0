@@ -272,12 +272,14 @@
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    NSString *latestEntity = [fetchedObjects objectAtIndex:0];
-    NSLog(@"Name: %@", [latestEntity valueForKey:@"lastscore"]);
-    NSLog(@"Timestamp: %@", [latestEntity valueForKey:@"timestamp"]);
+	if([fetchedObjects count] != 0) {
+        NSString *latestEntity = [fetchedObjects objectAtIndex:0];
+        NSLog(@"Name: %@", [latestEntity valueForKey:@"lastscore"]);
+        NSLog(@"Timestamp: %@", [latestEntity valueForKey:@"timestamp"]);
     
-    lastscore.text=[NSString stringWithFormat: @"Last Score: %@", [latestEntity valueForKey:@"lastscore"]];
-
+        lastscore.text=[NSString stringWithFormat: @"Last Score: %@", [latestEntity valueForKey:@"lastscore"]];
+    }
+        
     [UIView animateWithDuration:3.0
                           delay:0.0
                         options: UIViewAnimationCurveEaseOut
