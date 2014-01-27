@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "WhereamiAppDelegate.h"
+#import "HeadyQuizAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([WhereamiAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([HeadyQuizAppDelegate class]));
     }
 }

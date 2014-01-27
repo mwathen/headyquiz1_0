@@ -22,11 +22,11 @@
 		BAFA8D5F168DEC7E006F7031 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFA8D5E168DEC7E006F7031 /* CoreGraphics.framework */; };
 		BAFA8D65168DEC7E006F7031 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAFA8D63168DEC7E006F7031 /* InfoPlist.strings */; };
 		BAFA8D67168DEC7E006F7031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA8D66168DEC7E006F7031 /* main.m */; };
-		BAFA8D6B168DEC7E006F7031 /* WhereamiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA8D6A168DEC7E006F7031 /* WhereamiAppDelegate.m */; };
+		BAFA8D6B168DEC7E006F7031 /* HeadyQuizAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA8D6A168DEC7E006F7031 /* HeadyQuizAppDelegate.m */; };
 		BAFA8D6D168DEC7E006F7031 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA8D6C168DEC7E006F7031 /* Default.png */; };
 		BAFA8D6F168DEC7E006F7031 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA8D6E168DEC7E006F7031 /* Default@2x.png */; };
 		BAFA8D71168DEC7E006F7031 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA8D70168DEC7E006F7031 /* Default-568h@2x.png */; };
-		BAFA8D74168DEC7E006F7031 /* WhereamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA8D73168DEC7E006F7031 /* WhereamiViewController.m */; };
+		BAFA8D74168DEC7E006F7031 /* HeadyQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA8D73168DEC7E006F7031 /* HeadyQuizViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,13 +48,13 @@
 		BAFA8D64168DEC7E006F7031 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAFA8D66168DEC7E006F7031 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAFA8D68168DEC7E006F7031 /* HeadyQuiz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeadyQuiz-Prefix.pch"; sourceTree = "<group>"; };
-		BAFA8D69168DEC7E006F7031 /* WhereamiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiAppDelegate.h; sourceTree = "<group>"; };
-		BAFA8D6A168DEC7E006F7031 /* WhereamiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiAppDelegate.m; sourceTree = "<group>"; };
+		BAFA8D69168DEC7E006F7031 /* HeadyQuizAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadyQuizAppDelegate.h; sourceTree = "<group>"; };
+		BAFA8D6A168DEC7E006F7031 /* HeadyQuizAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadyQuizAppDelegate.m; sourceTree = "<group>"; };
 		BAFA8D6C168DEC7E006F7031 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BAFA8D6E168DEC7E006F7031 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BAFA8D70168DEC7E006F7031 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BAFA8D72168DEC7E006F7031 /* WhereamiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiViewController.h; sourceTree = "<group>"; };
-		BAFA8D73168DEC7E006F7031 /* WhereamiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiViewController.m; sourceTree = "<group>"; };
+		BAFA8D72168DEC7E006F7031 /* HeadyQuizViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadyQuizViewController.h; sourceTree = "<group>"; };
+		BAFA8D73168DEC7E006F7031 /* HeadyQuizViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadyQuizViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				BAF7FD5017C2F9D0007A9005 /* HeadyQuiz.xib */,
-				BAFA8D69168DEC7E006F7031 /* WhereamiAppDelegate.h */,
-				BAFA8D6A168DEC7E006F7031 /* WhereamiAppDelegate.m */,
-				BAFA8D72168DEC7E006F7031 /* WhereamiViewController.h */,
-				BAFA8D73168DEC7E006F7031 /* WhereamiViewController.m */,
+				BAFA8D69168DEC7E006F7031 /* HeadyQuizAppDelegate.h */,
+				BAFA8D6A168DEC7E006F7031 /* HeadyQuizAppDelegate.m */,
+				BAFA8D72168DEC7E006F7031 /* HeadyQuizViewController.h */,
+				BAFA8D73168DEC7E006F7031 /* HeadyQuizViewController.m */,
 				BAFA8D61168DEC7E006F7031 /* Supporting Files */,
 			);
 			path = test;
@@ -215,8 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFA8D67168DEC7E006F7031 /* main.m in Sources */,
-				BAFA8D6B168DEC7E006F7031 /* WhereamiAppDelegate.m in Sources */,
-				BAFA8D74168DEC7E006F7031 /* WhereamiViewController.m in Sources */,
+				BAFA8D6B168DEC7E006F7031 /* HeadyQuizAppDelegate.m in Sources */,
+				BAFA8D74168DEC7E006F7031 /* HeadyQuizViewController.m in Sources */,
 				BA7639BC17CFD7DF00C9CA24 /* HeadyQuiz.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
