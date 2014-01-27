@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WhereamiViewController">
+            <connections>
+                <outlet property="answer1Label" destination="52" id="79"/>
+                <outlet property="answer1button" destination="23" id="431"/>
+                <outlet property="answer2Label" destination="58" id="80"/>
+                <outlet property="answer2button" destination="26" id="435"/>
+                <outlet property="answer3Label" destination="66" id="81"/>
+                <outlet property="answer3button" destination="29" id="436"/>
+                <outlet property="answer4Label" destination="73" id="82"/>
+                <outlet property="answer4button" destination="32" id="434"/>
+                <outlet property="correctAnswerLabel" destination="412" id="422"/>
+                <outlet property="imgView" destination="455" id="460"/>
+                <outlet property="introLabel" destination="217" id="226"/>
+                <outlet property="lastscore" destination="608" id="614"/>
+                <outlet property="nextQuestion" destination="403" id="410"/>
+                <outlet property="questionLabel" destination="39" id="83"/>
+                <outlet property="startQuiz" destination="92" id="98"/>
+                <outlet property="view" destination="6" id="560"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                    <rect key="frame" x="20" y="112" width="33" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="33" id="360"/>
+                        <constraint firstAttribute="height" constant="24" id="365"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="answer1:" destination="-1" eventType="touchUpInside" id="88"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26">
+                    <rect key="frame" x="20" y="144" width="33" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="371"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="answer2:" destination="-1" eventType="touchUpInside" id="89"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29">
+                    <rect key="frame" x="20" y="177" width="33" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="377"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="answer3:" destination="-1" eventType="touchUpInside" id="90"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32">
+                    <rect key="frame" x="20" y="209" width="33" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="381"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="answer4:" destination="-1" eventType="touchUpInside" id="91"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="305" translatesAutoresizingMaskIntoConstraints="NO" id="39">
+                    <rect key="frame" x="8" y="5" width="305" height="104"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="305" id="473"/>
+                        <constraint firstAttribute="height" constant="104" id="579"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="52">
+                    <rect key="frame" x="86" y="109" width="180" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="165"/>
+                        <constraint firstAttribute="width" constant="180" id="166"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="165" translatesAutoresizingMaskIntoConstraints="NO" id="58">
+                    <rect key="frame" x="86" y="138" width="165" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="62"/>
+                        <constraint firstAttribute="height" constant="30" id="64"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="165" translatesAutoresizingMaskIntoConstraints="NO" id="66">
+                    <rect key="frame" x="86" y="174" width="165" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="150"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="173" translatesAutoresizingMaskIntoConstraints="NO" id="73">
+                    <rect key="frame" x="86" y="206" width="173" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="191"/>
+                        <constraint firstAttribute="width" constant="173" id="345"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92">
+                    <rect key="frame" x="53" y="510" width="217" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="217" id="195"/>
+                        <constraint firstAttribute="height" constant="44" id="196"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                    <state key="normal" title="Start Quiz">
+                        <color key="titleColor" red="0.1660650612" green="0.044033208810000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="startQuiz:" destination="-1" eventType="touchUpInside" id="97"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Heady Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="217">
+                    <rect key="frame" x="34" y="20" width="246" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="246" id="225"/>
+                        <constraint firstAttribute="height" constant="51" id="605"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="35"/>
+                    <color key="textColor" red="0.63926977039999999" green="0.024747855030000002" blue="0.015561360289999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="403">
+                    <rect key="frame" x="86" y="277" width="173" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="406"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                    <state key="normal" title="Next Question">
+                        <color key="titleColor" red="0.1660650612" green="0.044033208810000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextQuestion:" destination="-1" eventType="touchUpInside" id="423"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="412">
+                    <rect key="frame" x="86" y="243" width="173" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="419"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="7413.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="455">
+                    <rect key="frame" x="29" y="79" width="257" height="156"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="257" id="600"/>
+                        <constraint firstAttribute="height" constant="156" id="607"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="608">
+                    <rect key="frame" x="43" y="277" width="237" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="616"/>
+                        <constraint firstAttribute="width" constant="237" id="620"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.60696136619999996" green="0.86157904880000002" blue="1" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="217" firstAttribute="top" secondItem="6" secondAttribute="top" constant="20" symbolic="YES" id="301"/>
+                <constraint firstItem="23" firstAttribute="trailing" secondItem="26" secondAttribute="trailing" id="356"/>
+                <constraint firstItem="26" firstAttribute="trailing" secondItem="29" secondAttribute="trailing" id="357"/>
+                <constraint firstItem="29" firstAttribute="trailing" secondItem="32" secondAttribute="trailing" id="358"/>
+                <constraint firstItem="26" firstAttribute="top" secondItem="23" secondAttribute="bottom" constant="8" symbolic="YES" id="376"/>
+                <constraint firstItem="32" firstAttribute="top" secondItem="29" secondAttribute="bottom" constant="8" symbolic="YES" id="380"/>
+                <constraint firstItem="52" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" id="384"/>
+                <constraint firstItem="66" firstAttribute="centerY" secondItem="29" secondAttribute="centerY" id="389"/>
+                <constraint firstItem="26" firstAttribute="bottom" secondItem="58" secondAttribute="bottom" id="393"/>
+                <constraint firstItem="58" firstAttribute="trailing" secondItem="66" secondAttribute="trailing" id="394"/>
+                <constraint firstItem="52" firstAttribute="leading" secondItem="58" secondAttribute="leading" id="395"/>
+                <constraint firstItem="58" firstAttribute="leading" secondItem="66" secondAttribute="leading" id="396"/>
+                <constraint firstItem="73" firstAttribute="leading" secondItem="66" secondAttribute="leading" id="401"/>
+                <constraint firstItem="412" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="8" symbolic="YES" id="414"/>
+                <constraint firstItem="412" firstAttribute="trailing" secondItem="403" secondAttribute="trailing" id="415"/>
+                <constraint firstItem="403" firstAttribute="top" secondItem="412" secondAttribute="bottom" constant="8" symbolic="YES" id="416"/>
+                <constraint firstItem="73" firstAttribute="trailing" secondItem="412" secondAttribute="trailing" id="417"/>
+                <constraint firstItem="403" firstAttribute="leading" secondItem="412" secondAttribute="leading" id="420"/>
+                <constraint firstItem="73" firstAttribute="leading" secondItem="412" secondAttribute="leading" id="421"/>
+                <constraint firstItem="39" firstAttribute="top" secondItem="6" secondAttribute="top" constant="5" id="466"/>
+                <constraint firstItem="39" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="583"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="585"/>
+                <constraint firstItem="23" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="586"/>
+                <constraint firstItem="52" firstAttribute="top" secondItem="6" secondAttribute="top" constant="109" id="587"/>
+                <constraint firstItem="26" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="588"/>
+                <constraint firstItem="32" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="589"/>
+                <constraint firstItem="66" firstAttribute="top" secondItem="6" secondAttribute="top" constant="174" id="590"/>
+                <constraint firstItem="52" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="86" id="591"/>
+                <constraint firstItem="455" firstAttribute="centerX" secondItem="217" secondAttribute="centerX" id="602"/>
+                <constraint firstItem="455" firstAttribute="top" secondItem="217" secondAttribute="bottom" constant="8" symbolic="YES" id="604"/>
+                <constraint firstItem="412" firstAttribute="top" secondItem="455" secondAttribute="bottom" constant="8" symbolic="YES" id="606"/>
+                <constraint firstItem="608" firstAttribute="top" secondItem="412" secondAttribute="bottom" constant="8" symbolic="YES" id="610"/>
+                <constraint firstItem="217" firstAttribute="trailing" secondItem="608" secondAttribute="trailing" id="617"/>
+                <constraint firstAttribute="bottom" secondItem="92" secondAttribute="bottom" constant="14" id="623"/>
+                <constraint firstItem="92" firstAttribute="centerX" secondItem="608" secondAttribute="centerX" id="624"/>
+                <constraint firstItem="92" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="53" id="625"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="7413.jpg" width="569" height="320"/>
+    </resources>
+</document>

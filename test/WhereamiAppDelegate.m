@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[WhereamiViewController alloc] initWithNibName:@"testmike" bundle:nil];
+    self.viewController = [[WhereamiViewController alloc] initWithNibName:@"HeadyQuiz" bundle:nil];
     
     //let's see if we can get headyquiz to send a rotation notification
     //Get the device object

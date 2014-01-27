@@ -13,7 +13,7 @@
 		BABCB3BF16A392460075F8B2 /* 7413.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BABCB3BE16A392460075F8B2 /* 7413.jpg */; };
 		BABDF97217CF08C1005AB8BD /* BellBottom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABDF97117CF08C1005AB8BD /* BellBottom.ttf */; };
 		BAF7094117C67432007A9005 /* caseyjones_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAF7094017C67432007A9005 /* caseyjones_short.mp3 */; };
-		BAF7FD5117C2F9D0007A9005 /* testmike.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF7FD5017C2F9D0007A9005 /* testmike.xib */; };
+		BAF7FD5117C2F9D0007A9005 /* HeadyQuiz.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF7FD5017C2F9D0007A9005 /* HeadyQuiz.xib */; };
 		BAF7FD5317C30955007A9005 /* regular_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7FD5217C30955007A9005 /* regular_icon.png */; };
 		BAF7FD5517C3095E007A9005 /* retina_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF7FD5417C3095E007A9005 /* retina_icon.png */; };
 		BAF7FD5717C66EDE007A9005 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF7FD5617C66EDE007A9005 /* AVFoundation.framework */; };
@@ -36,7 +36,7 @@
 		BABCB3BE16A392460075F8B2 /* 7413.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7413.jpg; sourceTree = "<group>"; };
 		BABDF97117CF08C1005AB8BD /* BellBottom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BellBottom.ttf; path = ../../../../Downloads/BellBottom.ttf; sourceTree = "<group>"; };
 		BAF7094017C67432007A9005 /* caseyjones_short.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = caseyjones_short.mp3; path = ../../../.Trash/caseyjones_short.mp3; sourceTree = "<group>"; };
-		BAF7FD5017C2F9D0007A9005 /* testmike.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testmike.xib; sourceTree = "<group>"; };
+		BAF7FD5017C2F9D0007A9005 /* HeadyQuiz.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadyQuiz.xib; sourceTree = "<group>"; };
 		BAF7FD5217C30955007A9005 /* regular_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regular_icon.png; sourceTree = "<group>"; };
 		BAF7FD5417C3095E007A9005 /* retina_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retina_icon.png; sourceTree = "<group>"; };
 		BAF7FD5617C66EDE007A9005 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -111,7 +111,7 @@
 		BAFA8D60168DEC7E006F7031 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				BAF7FD5017C2F9D0007A9005 /* testmike.xib */,
+				BAF7FD5017C2F9D0007A9005 /* HeadyQuiz.xib */,
 				BAFA8D69168DEC7E006F7031 /* WhereamiAppDelegate.h */,
 				BAFA8D6A168DEC7E006F7031 /* WhereamiAppDelegate.m */,
 				BAFA8D72168DEC7E006F7031 /* WhereamiViewController.h */,
@@ -198,7 +198,7 @@
 				BAFA8D6F168DEC7E006F7031 /* Default@2x.png in Resources */,
 				BAFA8D71168DEC7E006F7031 /* Default-568h@2x.png in Resources */,
 				BABCB3BF16A392460075F8B2 /* 7413.jpg in Resources */,
-				BAF7FD5117C2F9D0007A9005 /* testmike.xib in Resources */,
+				BAF7FD5117C2F9D0007A9005 /* HeadyQuiz.xib in Resources */,
 				BAF7FD5317C30955007A9005 /* regular_icon.png in Resources */,
 				BAF7FD5517C3095E007A9005 /* retina_icon.png in Resources */,
 				BAF7094117C67432007A9005 /* caseyjones_short.mp3 in Resources */,
