@@ -12,6 +12,11 @@
 		BA7639F817D0E5E100C9CA24 /* sunglasses.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA7639F717D0E5E000C9CA24 /* sunglasses.jpg */; };
 		BAB277AB189610A8008492C7 /* headyquiz_bk1.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB277AA189610A8008492C7 /* headyquiz_bk1.png */; };
 		BAB277AF18961325008492C7 /* headyquiz_76.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB277AE18961325008492C7 /* headyquiz_76.png */; };
+		BAB277B11897394C008492C7 /* headyquiz_80.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB277B01897394C008492C7 /* headyquiz_80.png */; };
+		BAB277B3189739ED008492C7 /* headyquiz_40.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB277B2189739ED008492C7 /* headyquiz_40.png */; };
+		BAB277B518973D9C008492C7 /* headyquiz_58.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB277B418973D9C008492C7 /* headyquiz_58.png */; };
+		BAB277B718973E28008492C7 /* headyquiz_29.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB277B618973E28008492C7 /* headyquiz_29.png */; };
+		BAB277B918973FAB008492C7 /* headyquiz_152.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB277B818973FAB008492C7 /* headyquiz_152.png */; };
 		BABCB3BF16A392460075F8B2 /* 7413.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BABCB3BE16A392460075F8B2 /* 7413.jpg */; };
 		BABDF97217CF08C1005AB8BD /* BellBottom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABDF97117CF08C1005AB8BD /* BellBottom.ttf */; };
 		BAF7094117C67432007A9005 /* caseyjones_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAF7094017C67432007A9005 /* caseyjones_short.mp3 */; };
@@ -37,6 +42,11 @@
 		BA7639F717D0E5E000C9CA24 /* sunglasses.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sunglasses.jpg; path = ../../../Downloads/sunglasses.jpg; sourceTree = "<group>"; };
 		BAB277AA189610A8008492C7 /* headyquiz_bk1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headyquiz_bk1.png; path = ../../../../Pictures/headyquiz_bk1.png; sourceTree = "<group>"; };
 		BAB277AE18961325008492C7 /* headyquiz_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headyquiz_76.png; path = ../../../../Pictures/headyquiz_76.png; sourceTree = "<group>"; };
+		BAB277B01897394C008492C7 /* headyquiz_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headyquiz_80.png; path = ../../../../Pictures/headyquiz_80.png; sourceTree = "<group>"; };
+		BAB277B2189739ED008492C7 /* headyquiz_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headyquiz_40.png; path = ../../../../Pictures/headyquiz_40.png; sourceTree = "<group>"; };
+		BAB277B418973D9C008492C7 /* headyquiz_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headyquiz_58.png; path = ../../../../Pictures/headyquiz_58.png; sourceTree = "<group>"; };
+		BAB277B618973E28008492C7 /* headyquiz_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headyquiz_29.png; path = ../../../../Pictures/headyquiz_29.png; sourceTree = "<group>"; };
+		BAB277B818973FAB008492C7 /* headyquiz_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headyquiz_152.png; path = ../../../../Pictures/headyquiz_152.png; sourceTree = "<group>"; };
 		BABCB3BE16A392460075F8B2 /* 7413.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7413.jpg; sourceTree = "<group>"; };
 		BABDF97117CF08C1005AB8BD /* BellBottom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BellBottom.ttf; path = ../../../../Downloads/BellBottom.ttf; sourceTree = "<group>"; };
 		BAF7094017C67432007A9005 /* caseyjones_short.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = caseyjones_short.mp3; path = ../../../.Trash/caseyjones_short.mp3; sourceTree = "<group>"; };
@@ -128,6 +138,11 @@
 		BAFA8D61168DEC7E006F7031 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAB277B818973FAB008492C7 /* headyquiz_152.png */,
+				BAB277B618973E28008492C7 /* headyquiz_29.png */,
+				BAB277B418973D9C008492C7 /* headyquiz_58.png */,
+				BAB277B2189739ED008492C7 /* headyquiz_40.png */,
+				BAB277B01897394C008492C7 /* headyquiz_80.png */,
 				BAB277AE18961325008492C7 /* headyquiz_76.png */,
 				BAB277AA189610A8008492C7 /* headyquiz_bk1.png */,
 				BABDF97117CF08C1005AB8BD /* BellBottom.ttf */,
@@ -200,12 +215,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFA8D65168DEC7E006F7031 /* InfoPlist.strings in Resources */,
+				BAB277B3189739ED008492C7 /* headyquiz_40.png in Resources */,
 				BAFA8D6D168DEC7E006F7031 /* Default.png in Resources */,
+				BAB277B518973D9C008492C7 /* headyquiz_58.png in Resources */,
 				BAB277AB189610A8008492C7 /* headyquiz_bk1.png in Resources */,
 				BAFA8D6F168DEC7E006F7031 /* Default@2x.png in Resources */,
+				BAB277B11897394C008492C7 /* headyquiz_80.png in Resources */,
 				BAFA8D71168DEC7E006F7031 /* Default-568h@2x.png in Resources */,
 				BAB277AF18961325008492C7 /* headyquiz_76.png in Resources */,
+				BAB277B918973FAB008492C7 /* headyquiz_152.png in Resources */,
 				BABCB3BF16A392460075F8B2 /* 7413.jpg in Resources */,
+				BAB277B718973E28008492C7 /* headyquiz_29.png in Resources */,
 				BAF7FD5117C2F9D0007A9005 /* HeadyQuiz.xib in Resources */,
 				BAF7FD5317C30955007A9005 /* regular_icon.png in Resources */,
 				BAF7FD5517C3095E007A9005 /* retina_icon.png in Resources */,
